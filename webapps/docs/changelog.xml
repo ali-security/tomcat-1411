@@ -108,6 +108,10 @@
   <subsection name="Catalina">
     <changelog>
       <fix>
+        Fix handling of <code>QSA</code> and <code>QSD</code> flags in
+        <code>RewriteValve</code>. (markt)
+      </fix>
+      <fix>
         <bug>66388</bug>: Correct a regression in the refactoring that replaced
         the use of the <code>URL</code> constructors. The regression broke
         lookups for resources that contained one or more characters in their
