@@ -151,7 +151,7 @@ public class OneLineFormatter extends Formatter {
 
         // Message
         sb.append(' ');
-        sb.append(formatMessage(record));
+        sb.append(LogUtil.escape(formatMessage(record)));
 
         // New line for next record
         sb.append(System.lineSeparator());
@@ -162,7 +162,7 @@ public class OneLineFormatter extends Formatter {
             PrintWriter pw = new IndentingPrintWriter(sw);
             record.getThrown().printStackTrace(pw);
             pw.close();
-            sb.append(sw.getBuffer());
+            sb.append(LogUtil.escape(sw.toString()));
         }
 
         return sb.toString();

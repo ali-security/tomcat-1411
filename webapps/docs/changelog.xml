@@ -199,6 +199,9 @@
       <update>
         Update SpotBugs to 4.7.3. (markt)
       </update>
+      <add>
+        Add escaping to log formatters to align with JSON formatter. (markt)
+      </add>
     </changelog>
   </subsection>
 </section>
